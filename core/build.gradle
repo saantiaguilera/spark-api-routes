@@ -1,0 +1,18 @@
+project.ext.aspectjVersion = '1.8.13'
+
+apply plugin: JavaPlugin
+apply plugin: "aspectj.gradle"
+apply plugin: MavenPublishPlugin
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+dependencies {
+    compile group: "com.sparkjava", name: "spark-core", version: "2.7.0"
+    compile group: "org.slf4j", name: "slf4j-simple", version: "1.7.25"
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+group 'com.saantiaguilera.sparkroutes'
+version '1.0.0-SNAPSHOT'
